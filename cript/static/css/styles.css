@@ -1,0 +1,50 @@
+
+
+/* change the color of active or hovered links in navbar 
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+    background-color: #e9ecef; color: black;
+}
+*/
+
+
+/* for navbar links to stretch across entire width 
+.navbar-nav {
+    display:table;
+    width:100%;
+    margin: 0;
+}
+.navbar-nav > li {
+    float:none;
+    display:table-cell;
+    text-align:center;
+}
+*/
+
+
+.jumbotron {
+     padding-top: 25px;
+     padding-bottom: 25px;
+}
+
+
+
+/* ====== desktop view navbar dropdown on hover ======= */
+@media all and (min-width: 992px) {
+    .navbar .nav-item:hover .dropdown-menu{ display: block; }
+    .navbar .nav-item .dropdown-menu{ margin-top:0; }
+}
+
+/* spacing between navbar links 
+.navbar-nav .nav-link {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+*/
+/*
+body {background-color: black;}
+*/
+
+/* Datatables styling 
+.table.dataTable {font-size: 12px;}
+*/
