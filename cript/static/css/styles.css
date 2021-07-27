@@ -35,6 +35,8 @@
     .navbar .nav-item .dropdown-menu{ margin-top:0; }
 }
 
+
+
 /* spacing between navbar links 
 .navbar-nav .nav-link {
     margin-right: 15px;
@@ -48,3 +50,5 @@ body {background-color: black;}
 /* Datatables styling 
 .table.dataTable {font-size: 12px;}
 */
+
+
