@@ -3,10 +3,9 @@
 /* change the color of active or hovered links in navbar 
 .navbar-nav .nav-item.active .nav-link,
 .navbar-nav .nav-item:hover .nav-link {
-    background-color: #e9ecef; color: black;
+    background-color: white; color: black;
 }
 */
-
 
 /* for navbar links to stretch across entire width 
 .navbar-nav {
@@ -36,15 +35,8 @@
 }
 
 
-
-/* spacing between navbar links 
-.navbar-nav .nav-link {
-    margin-right: 15px;
-    margin-left: 15px;
-}
-*/
 /*
-body {background-color: black;}
+body {background-color: #767676;}
 */
 
 /* Datatables styling 

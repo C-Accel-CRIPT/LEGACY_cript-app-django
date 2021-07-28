@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
+import urllib
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -34,6 +35,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # default apps
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -84,22 +86,36 @@ WSGI_APPLICATION = "cript.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+"""
+Use this for default local SQLite database
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
+"""
 
-"""
-Use this for djongo
+
+# Use this for djongo database
+DB_USERNAME = os.environ["DB_USERNAME"]
+DB_PASSWORD = os.environ["DB_PASSWORD"]
+CLUSTER_HOST = os.environ["CLUSTER_HOST"]
+DB_NAME = "cript-db-v2"
+
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'your-db-name',
-    }
+    "default": {
+        "ENGINE": "djongo",
+        "CLIENT": {
+            "host": f"mongodb+srv://{DB_USERNAME}:{DB_PASSWORD}@{CLUSTER_HOST}/?retryWrites=true&w=majority",
+            "username": DB_USERNAME,
+            "password": DB_PASSWORD,
+            "name": DB_NAME,
+            "authMechanism": "SCRAM-SHA-1",
+        },
+    },
 }
-"""
 
 
 # Password validation
