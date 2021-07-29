@@ -5,11 +5,15 @@ from rest_framework import viewsets, generics
 from .serializers import MaterialSerializer
 from .models import Material
 
-"""
-class MaterialViewSet(viewsets.ModelViewSet):
-    queryset = Material.objects.all().order_by("name")
-    serializer_class = MaterialSerializer
-"""
+
+def index(request):
+    """View for the API index.html homepage"""
+    return render(request, "api_index.html", {})
+
+
+def about(request):
+    """View for the API index.html homepage"""
+    return render(request, "api_about.html", {})
 
 
 class MaterialList(generics.ListCreateAPIView):

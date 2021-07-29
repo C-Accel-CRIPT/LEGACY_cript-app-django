@@ -1,11 +1,11 @@
 
 
-/* change the color of active or hovered links in navbar 
+/* change the color of active or hovered links in navbar */
 .navbar-nav .nav-item.active .nav-link,
 .navbar-nav .nav-item:hover .nav-link {
-    background-color: white; color: black;
+    background-color: gray; color: white;
 }
-*/
+
 
 /* for navbar links to stretch across entire width 
 .navbar-nav {
@@ -35,9 +35,9 @@
 }
 
 
-/*
-body {background-color: #767676;}
-*/
+
+body {background-color: #343a40;}
+
 
 /* Datatables styling 
 .table.dataTable {font-size: 12px;}

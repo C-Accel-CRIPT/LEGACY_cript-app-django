@@ -9,8 +9,10 @@ from . import views
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
-    # path("", include(router.urls)),
+    path("", views.index, name="api_index"),
+    path("about/", views.about, name="api_about"),
     path("materials/", views.MaterialList.as_view()),
     path("materials/<int:pk>/", views.MaterialDetail.as_view()),
-    # path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
+    # path("keywords/", views.KeywordList.as_view()),
+    # path("keywords/<int:pk>/", views.KeywordDetail.as_view()),
 ]

@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     # for creating REST API
     "rest_framework",
     # user-created apps
-    "search",
+    "pages",
     "api",
 ]
 
