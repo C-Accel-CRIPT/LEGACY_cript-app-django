@@ -23,3 +23,14 @@ This repository stores the web application for CRIPT: the Community Resource for
 1. create a view for the app in `baseapp/views.py`
 1. map the view to a URL using a `URLconf`. this should be in `baseapp/urls.py`
 1. now we need to point the root `URLconf` at the `baseapp.urls` module. In `dsite/urls.py`, add an import for `django.urls.include` and insert the app in the urlpatterns list
+
+
+## Notes
+* Current `cript` data model requires user access to theDB password, and potential manual addition of each new user
+* Current `cript` data model requires user to have access first to create a user node for themself
+* Users should be able to autonomously
+    * create accounts (which gives them API access)
+    * edit their login password and details
+    * create collections and upload data through their credentials
+
+

@@ -24,6 +24,7 @@ class Material(models.Model):
 
     name = models.CharField(max_length=250, blank=True)
     material_type = models.CharField(max_length=250, blank=True)
+    created = models.DateTimeField(auto_now_add=True)
 
     keywords = models.CharField(max_length=2000, blank=True)
 
